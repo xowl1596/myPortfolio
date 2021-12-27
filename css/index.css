@@ -1,0 +1,19 @@
+/* 
+    #F280AA 
+    FAA0C1
+    FAC0D2
+    EDEDED
+    CCCCCC
+    BABABA
+*/
+
+.imgDiv {
+    height: 200px;
+    background: #aaa;
+}
+
+#profilePic{
+    width : 200px;
+    background-image: url("../assets/myPicture.png");
+    background-size: 100% 100%
+}
