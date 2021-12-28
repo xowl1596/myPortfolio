@@ -125,30 +125,35 @@ class ProfilePhoto extends HTMLElement{
     connectedCallback(){
         let container = this.createContainer();
         let contents = this.createContents();
-        this.appendChild(container)
+        
+        this.appendContents(contents, container);
     }
 
     createContainer() {
         let container = document.createElement('div');
-        outerContainer.classList.add('col-sm-4');
+        container.classList.add('col-sm-4');
 
-        let innerContainer = document.createElement('div');
-        innerContainer.classList.add('container-fluid');
-        
-        let navList = this.createNavList();
-
-        innerContainer.appendChild(navList);
-        outerContainer.appendChild(innerContainer);
-
-        return outerContainer;
+        return container;
     }
 
-    
-    
-    appendContents(container, topText, bottomText) {
-        container.appendChild(topText);
-        container.appendChild(bottomText);
-        this.appendChild(container)
+    createContents() {
+        let contentTop = document.createElement('h2');
+        contentTop.innerText = 'Hello :)';
+        let contentMiddle = document.createElement('div');
+        contentMiddle.classList.add('imgDiv');
+        contentMiddle.id = 'profilePic';
+        let contentBottom = document.createElement('p');
+        contentBottom.innerText = '다 비켜 이 구역의 미친놈은 나야!!!'
+
+        return [contentTop, contentMiddle, contentBottom];
+    }
+
+    appendContents(contents, container) {
+        contents.map((item) => {
+            container.appendChild(item);
+        });
+        this.classList.add('col-sm-4');
+        this.appendChild(container);
     }
 }
 
