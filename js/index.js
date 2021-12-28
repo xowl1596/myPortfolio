@@ -67,8 +67,6 @@ class Top extends HTMLElement{
 class Navigation extends HTMLElement{
     connectedCallback(){
         let container = this.createContainer();
-        
-        
         this.appendChild(container)
     }
 
@@ -109,7 +107,7 @@ class Navigation extends HTMLElement{
         itemInformations.map((itemInfo)=>{
             let item = document.createElement('li');
             item.classList.add('nav-item');
-
+            
             let link = document.createElement('a');
             link.classList.add('nav-link');
             link.innerText = itemInfo[0];
@@ -119,9 +117,33 @@ class Navigation extends HTMLElement{
             navItems.push(item);
         });
 
-
         return navItems;
     }
+}
+
+class ProfilePhoto extends HTMLElement{
+    connectedCallback(){
+        let container = this.createContainer();
+        let contents = this.createContents();
+        this.appendChild(container)
+    }
+
+    createContainer() {
+        let container = document.createElement('div');
+        outerContainer.classList.add('col-sm-4');
+
+        let innerContainer = document.createElement('div');
+        innerContainer.classList.add('container-fluid');
+        
+        let navList = this.createNavList();
+
+        innerContainer.appendChild(navList);
+        outerContainer.appendChild(innerContainer);
+
+        return outerContainer;
+    }
+
+    
     
     appendContents(container, topText, bottomText) {
         container.appendChild(topText);
@@ -129,7 +151,9 @@ class Navigation extends HTMLElement{
         this.appendChild(container)
     }
 }
+
 customElements.define('main-footer', Footer);
 customElements.define('main-top', Top);
 customElements.define('main-nav', Navigation);
+customElements.define('profile-photo', ProfilePhoto);
 
