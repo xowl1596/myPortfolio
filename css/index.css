@@ -9,11 +9,46 @@
 
 .imgDiv {
     height: 200px;
-    background: #aaa;
+    background: none;
 }
 
 #profilePic{
     width : 200px;
     background-image: url("../assets/myPicture.png");
-    background-size: 100% 100%
+    background-size: 100% 100%;
+}
+
+.picture {
+    margin-bottom : 10px;
+}
+#cims-pic{
+    width : 100%;
+    height : 400px;
+    background-image: url("../assets/cims.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#makit-pic{
+    width : 100%;
+    height : 100px;
+    background-image: url("../assets/makit.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#makit2-pic{
+    width : 100%;
+    height : 400px;
+    background-image: url("../assets/makit2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#makit3-pic{
+    width : 100%;
+    height : 400px;
+    background-image: url("../assets/makit3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
