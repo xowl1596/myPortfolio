@@ -20,7 +20,7 @@ class ProfilePhoto extends HTMLElement {
         contentMiddle.classList.add('imgDiv');
         contentMiddle.id = 'profilePic';
         let contentBottom = document.createElement('p');
-        contentBottom.innerText = '다 비켜 이 구역의 미친놈은 나야!!!';
+        contentBottom.innerText = '웹개발자';
 
         return [contentTop, contentMiddle, contentBottom];
     }
